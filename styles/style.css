@@ -7,4 +7,6 @@
 
 body {
     background-image: url("/images/01-Early-Morning.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
