@@ -7,15 +7,29 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css">
+
+    <script type="text/javascript" src="scripts/management.js"></script>
 </head>
 
+<div class="loading">
+    <div class="loader">
+        <p>Loading...</p>
+        <progress id="progress" class="nes-progress is-primary" value="0" max="100"></progress>
+    </div> 
+</div>
+
 <body>
-    
+
+
     <div class="action-container">
         <button id="about-btn" type="button" class="nes-btn is-primary">About</button>
         <button id="education-btn" type="button" class="nes-btn is-success">Education</button>
         <button id="contact-btn" type="button" class="nes-btn is-warning">Contact</button>
     </div>
+
+
+    
+    
 
 
 

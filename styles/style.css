@@ -49,3 +49,20 @@ body > footer {
     display: flex;
     justify-content: flex-end;
 }
+
+
+/* loader */
+.loading {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+.loader {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+}
