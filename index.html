@@ -19,13 +19,47 @@
 </div>
 
 <body>
+    
 
-
-    <div class="action-container">
-        <button id="about-btn" type="button" class="nes-btn is-primary">About</button>
-        <button id="education-btn" type="button" class="nes-btn is-success">Education</button>
-        <button id="contact-btn" type="button" class="nes-btn is-warning">Contact</button>
+    <div class="content" style="display: grid; height: 92vh; grid-template-rows: auto 8vh;">
+        <div style="display: grid; grid-template-columns: auto auto;">
+            <div style="display: flex; align-items: center; ">
+                <div class="welcome">
+                    <section class="message-list">
+                        <section class="message -left">
+                        <!-- avatar -->
+                        <i class="avatar nes-bcrikko"></i>
+                        <!-- Balloon -->
+                        <div id="message" class="nes-balloon from-left">
+                        </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+            <div>
+                <div class="about-container">
+                    <div class="nes-container is-rounded">
+                        <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+                      </div>
+                </div>
+                <div class="education-container"></div>
+                <div class="contact-container"></div>
+            </div>
+        </div>
+        <div>
+            <div class="action-container">
+                <button id="about-btn" type="button" class="nes-btn is-primary">About</button>
+                <button id="education-btn" type="button" class="nes-btn is-success">Education</button>
+                <button id="contact-btn" type="button" class="nes-btn is-warning">Contact</button>
+            </div>
+        </div>
     </div>
+    
+    
+   
+
+
+   
 
 
     
@@ -42,7 +76,19 @@
     <!-- Image used for footer background image is comming from  https://www.vecteezy.com/ -->
     <footer class="footer">
         <div class="footer-box">
-            PS 2023
+            <div class="sns-icons">
+                <!-- facebook -->
+                <i class="nes-icon facebook is-small nes-pointer"></i>
+
+                <!-- github -->
+                <i class="nes-icon github is-small nes-pointer"></i>
+
+                <!-- linkedin -->
+                <i class="nes-icon linkedin is-small nes-pointer"></i>
+            </div>
+            <div class="">
+                PS 2023
+            </div>
         </div>
     </footer>
 </body>
