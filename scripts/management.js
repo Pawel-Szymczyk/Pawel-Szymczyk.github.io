@@ -57,11 +57,7 @@ document.onreadystatechange = function() {
 let index = 0;
 const text = "Hi, nice to meet you!\nMy name is Pawel Szymczyk.\nI am a software engineer,\ncurrently I am working at QWARE.";
         
-
-
-
 function typingAnimation (id) {
-
     setTimeout(() => {
       index++;
       updateText(id);
@@ -70,9 +66,6 @@ function typingAnimation (id) {
       }
     }, 50)
   }
-
-
-
 
   function updateText(id) {
     // Get the element with our id
@@ -108,6 +101,15 @@ function typingAnimation (id) {
     //   typing.insertAdjacentHTML("beforeend", '<span class="cursor"></span>');  
   
     // }  
+  }
+
+
+  function updateBackground() {
+
+    let backgrounds = [
+
+    ];
+
   }
 
 
