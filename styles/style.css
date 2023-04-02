@@ -23,7 +23,7 @@ body {
     flex-direction: column;
 
     background-color: #000;
-    background-image: url("/images/01-Early-Morning.png");
+    /* background-image: url("/images/01-Early-Morning.png"); */
     background-repeat: no-repeat;
     background-size: cover;
 }
