@@ -23,7 +23,8 @@ document.onreadystatechange = function() {
 
     } else {
 
-        updateBackground();
+
+       
        
         //delay for 2500ms
         setTimeout(() => {
@@ -31,6 +32,8 @@ document.onreadystatechange = function() {
             document.querySelector(".loading").style.display = "none";
             document.querySelector("body").style.visibility = "visible";
             document.querySelector(".content").style.display = "grid";
+
+            setBackground();
 
             setTimeout(() => {
                 // show avatar
@@ -47,6 +50,8 @@ document.onreadystatechange = function() {
              } , 500);
 
         }, 2500);
+
+        
 
 
         // rest code here 
@@ -104,12 +109,13 @@ function typingAnimation (id) {
     // }  
   }
 
+  
 
-  function updateBackground() {
+  function setBackground() {
 
-    let idx = -1,
-    timer = 1000 * 60 * 60, // 1h
-    backgrounds = [
+    let idx = -1;
+    const hour = new Date().getHours();
+    const backgrounds = [
         "/images/01-Early-Morning.png",
         "/images/02-Mid-Morning.png",
         "/images/03-Late-Morning.png",
@@ -124,43 +130,47 @@ function typingAnimation (id) {
         "/images/12-Late-Night.png"
     ];
 
-    setInterval(() => {
-        let hour = new Date().getHours();
+    // morning - 5am - 12pm
+    // afternoon - 12pm - 5pm
+    // evening - 5pm - 9pm
+    // night - 9pm - 4am
+    if(hour >= 5 && hour < 8) {
+        idx = 0;
+    } else if (hour >= 8 && hour < 11) {
+        idx = 1;
+    } else if (hour >= 11 && hour < 12) {
+        idx = 2;
+    } else if (hour >= 12 && hour < 14) {
+        idx = 3;
+    } else if (hour >= 14 && hour < 16) {
+        idx = 4;
+    } else if (hour >= 16 && hour < 17) {
+        idx = 5;
+    } else if (hour >= 17 && hour < 18) {
+        idx = 6;
+    } else if (hour >= 18 && hour < 20) {
+        idx = 7;
+    } else if (hour >= 20 && hour < 22) {
+        idx = 8;
+    } else if (hour >= 22 && hour < 24) {
+        idx = 9;
+    } else if (hour >= 24 && hour < 2) {
+        idx = 10;
+    } else {
+        idx = 11;
+    }
 
-        // morning - 5am - 12pm
-        // afternoon - 12pm - 5pm
-        // evening - 5pm - 9pm
-        // night - 9pm - 4am
-        if(hour >= 5 && hour < 8) {
-            idx = 0;
-        } else if (hour >= 8 && hour < 11) {
-            idx = 1;
-        } else if (hour >= 11 && hour < 12) {
-            idx = 2;
-        } else if (hour >= 12 && hour < 14) {
-            idx = 3;
-        } else if (hour >= 14 && hour < 16) {
-            idx = 4;
-        } else if (hour >= 16 && hour < 17) {
-            idx = 5;
-        } else if (hour >= 17 && hour < 18) {
-            idx = 6;
-        } else if (hour >= 18 && hour < 20) {
-            idx = 7;
-        } else if (hour >= 20 && hour < 22) {
-            idx = 8;
-        } else if (hour >= 22 && hour < 24) {
-            idx = 9;
-        } else if (hour >= 24 && hour < 2) {
-            idx = 10;
-        } else {
-            idx = 11;
-        }
-
-        document.querySelector("body").setAttribute("style", `background-image: url(${backgrounds[idx]})`);
-    }, timer);
-
+    document.querySelector("body").setAttribute("style", `background-image: url(${backgrounds[idx]})`);
   }
+
+
+
+
+
+
+
+
+
 
 
 
