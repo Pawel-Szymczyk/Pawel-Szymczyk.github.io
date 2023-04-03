@@ -23,8 +23,6 @@ document.onreadystatechange = function() {
 
     } else {
 
-
-       
        
         //delay for 2500ms
         setTimeout(() => {
@@ -51,10 +49,45 @@ document.onreadystatechange = function() {
 
         }, 2500);
 
+
+        let about = document.querySelector(".about-container");
+        let education = document.querySelector(".education-container");
+        let contact = document.querySelector(".contact-container");
+        // about
+        document.getElementById("about-btn").addEventListener("click", () => {
+            
+            if(about.style.display === "none") {
+                education.style.display = "none";
+                contact.style.display = "none";
+                about.style.display = "block";
+            } else {
+                about.style.display = "none";
+            }
+        });
         
+        // education
+        document.getElementById("education-btn").addEventListener("click", () => {
+            
+            if(education.style.display === "none") {
+                contact.style.display = "none";
+                about.style.display = "none";
+                education.style.display = "block";
+            } else {
+                education.style.display = "none";
+            }
+        });
 
-
-        // rest code here 
+        // contact
+        document.getElementById("contact-btn").addEventListener("click", () => {
+            
+            if(contact.style.display === "none") {
+                education.style.display = "none";
+                about.style.display = "none";
+                contact.style.display = "block";
+            } else {
+                contact.style.display = "none";
+            }
+        });
         
        
     }

@@ -28,8 +28,12 @@ body {
     background-size: cover;
 }
 
-.welcome {
-    margin: 20px;
+.welcome, .about-container, .education-container, .contact-container {
+    margin: 4em;
+}
+
+.about-container, .education-container, .contact-container {
+    display: none;
 }
 
 .avatar.show, #message.show {
