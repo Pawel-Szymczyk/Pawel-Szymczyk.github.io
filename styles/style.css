@@ -32,9 +32,7 @@ body {
     margin: 4em;
 }
 
-.about-container, .education-container, .contact-container {
-    display: none;
-}
+
 
 .avatar.show, #message.show {
     opacity: 1;

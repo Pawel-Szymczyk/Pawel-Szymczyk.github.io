@@ -23,6 +23,16 @@ document.onreadystatechange = function() {
 
     } else {
 
+        let about = document.querySelector(".about-container");
+        let education = document.querySelector(".education-container");
+        let contact = document.querySelector(".contact-container");
+        
+        addAboutEventListener(about, contact, education);
+        addEducationEventListener(about, contact, education);
+        addContactEventListener(about, contact, education);
+
+        
+
        
         //delay for 2500ms
         setTimeout(() => {
@@ -50,44 +60,7 @@ document.onreadystatechange = function() {
         }, 2500);
 
 
-        let about = document.querySelector(".about-container");
-        let education = document.querySelector(".education-container");
-        let contact = document.querySelector(".contact-container");
-        // about
-        document.getElementById("about-btn").addEventListener("click", () => {
-            
-            if(about.style.display === "none") {
-                education.style.display = "none";
-                contact.style.display = "none";
-                about.style.display = "block";
-            } else {
-                about.style.display = "none";
-            }
-        });
-        
-        // education
-        document.getElementById("education-btn").addEventListener("click", () => {
-            
-            if(education.style.display === "none") {
-                contact.style.display = "none";
-                about.style.display = "none";
-                education.style.display = "block";
-            } else {
-                education.style.display = "none";
-            }
-        });
-
-        // contact
-        document.getElementById("contact-btn").addEventListener("click", () => {
-            
-            if(contact.style.display === "none") {
-                education.style.display = "none";
-                about.style.display = "none";
-                contact.style.display = "block";
-            } else {
-                contact.style.display = "none";
-            }
-        });
+       
         
        
     }
@@ -187,6 +160,11 @@ function typingAnimation (id) {
         idx = 8;
     } else if (hour >= 22 && hour < 24) {
         idx = 9;
+        const matches = document.querySelectorAll(".nes-container");
+        matches.forEach((match) => {
+            match.classList.add('is-dark');
+        });
+
     } else if (hour >= 24 && hour < 2) {
         idx = 10;
     } else {
@@ -197,7 +175,47 @@ function typingAnimation (id) {
   }
 
 
+  function addAboutEventListener(about, contact, education) {
+    // about
+    document.getElementById("about-btn").addEventListener("click", () => {
+            
+        if(about.style.display === "none") {
+            education.style.display = "none";
+            contact.style.display = "none";
+            about.style.display = "block";
+        } else {
+            about.style.display = "none";
+        }
+    });
+  }
 
+  function addContactEventListener(about, contact, education) {
+    // contact
+    document.getElementById("contact-btn").addEventListener("click", () => {
+            
+        if(contact.style.display === "none") {
+            education.style.display = "none";
+            about.style.display = "none";
+            contact.style.display = "block";
+        } else {
+            contact.style.display = "none";
+        }
+    });
+  }
+
+  function addEducationEventListener(about, contact, education) {
+    // education
+    document.getElementById("education-btn").addEventListener("click", () => {
+            
+        if(education.style.display === "none") {
+            contact.style.display = "none";
+            about.style.display = "none";
+            education.style.display = "block";
+        } else {
+            education.style.display = "none";
+        }
+    });
+  }
 
 
 
