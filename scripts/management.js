@@ -32,7 +32,7 @@ document.onreadystatechange = function() {
         addContactEventListener(about, contact, education);
 
         
-
+        setTheme();
        
         //delay for 2500ms
         setTimeout(() => {
@@ -160,11 +160,6 @@ function typingAnimation (id) {
         idx = 8;
     } else if (hour >= 22 && hour < 24) {
         idx = 9;
-        const matches = document.querySelectorAll(".nes-container");
-        matches.forEach((match) => {
-            match.classList.add('is-dark');
-        });
-
     } else if (hour >= 24 && hour < 2) {
         idx = 10;
     } else {
@@ -172,6 +167,35 @@ function typingAnimation (id) {
     }
 
     document.querySelector("body").setAttribute("style", `background-image: url(${backgrounds[idx]})`);
+  }
+
+  function setTheme() {
+    const hour = new Date().getHours();
+    if(hour >= 5 && hour < 22) {
+        setLightTheme();
+    } else {
+        setDarkTheme();
+    }
+  }
+
+  function setDarkTheme() {
+    const matches = document.querySelectorAll(".nes-container");
+    matches.forEach((match) => {
+        match.classList.add('is-dark');
+    });
+
+    const message = document.querySelector(".nes-balloon");
+    message.classList.add('is-dark');
+  }
+
+  function setLightTheme() {
+    const matches = document.querySelectorAll(".nes-container");
+    matches.forEach((match) => {
+        match.classList.add('is-light');
+    });
+
+    const message = document.querySelector(".nes-balloon");
+    message.classList.add('is-light');
   }
 
 

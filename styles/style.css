@@ -32,7 +32,9 @@ body {
     margin: 4em;
 }
 
-
+.is-light {
+    background-color: #fff;
+}
 
 .avatar.show, #message.show {
     opacity: 1;
