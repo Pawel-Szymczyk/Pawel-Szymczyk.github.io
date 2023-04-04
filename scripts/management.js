@@ -176,6 +176,7 @@ function typingAnimation (id) {
     } else {
         setDarkTheme();
     }
+
   }
 
   function setDarkTheme() {
@@ -186,6 +187,14 @@ function typingAnimation (id) {
 
     const message = document.querySelector(".nes-balloon");
     message.classList.add('is-dark');
+
+    const inputs = document.querySelectorAll(".nes-input");
+    inputs.forEach((input) => {
+        input.classList.add('is-dark');
+    });
+
+    const textarea = document.querySelector(".nes-textarea");
+    textarea.classList.add('is-dark');
   }
 
   function setLightTheme() {

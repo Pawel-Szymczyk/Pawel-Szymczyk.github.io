@@ -3,6 +3,7 @@
 
 <head>
     <Title>Pawel Szymczyk</Title>
+    <!-- https://github.com/Pawel-Szymczyk/NES.css -->
 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
@@ -21,7 +22,7 @@
 <body>
     
 
-    <div class="content" style="display: grid; height: 92vh; grid-template-rows: auto 8vh;">
+    <div class="content" style="display: grid; height: 92vh; grid-template-rows: auto 8vh; overflow-y: auto;">
         <div style="display: grid; grid-template-columns: 50% auto;">
             <div style="display: flex; align-items: center; ">
                 <div class="welcome">
@@ -59,7 +60,39 @@
                 <div class="contact-container" style="display: none;">
                     <div class="nes-container with-title">
                         <p class="title">GET IN TOUCH</p>
-                        <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+
+                        <div>
+                            <div>
+                                <span class="nes-text is-primary">Whether you have a question or just want to say hi, <br />I’ll try my best to get back to you!</span>
+                            </div>
+                            <br />
+                            <div>
+                                <form action="https://fabform.io/f/6tlC0bm" method="post">
+                                    <div class="nes-field">
+                                        <label for="firstName">First Name</label>
+                                        <input name="firstName" id="firstName" class="nes-input" type="text" required>
+                                    </div>
+                                    <div class="nes-field">
+                                        <label for="lastName">Last Name</label>
+                                        <input name="lastName" id="lastName" class="nes-input" type="text" required>
+                                    </div>
+                                    <div class="nes-field">
+                                        <label for="email">Email</label>
+                                        <input name="email" id="email" class="nes-input" type="email" required>
+                                    </div>
+                                    <div class="nes-field">
+                                        <label for="message">Message</label>
+                                        <textarea name="message" class="nes-textarea" required></textarea>  
+                                    </div>
+                                    <div style="display: flex; flex-direction: row; justify-content: flex-end;">
+                                        <button class="nes-btn is-primary is-link" type="submit">Say Hello</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                       
+
                     </div>
                 </div>
             </div>

@@ -18,6 +18,10 @@ html, body {
     margin: 0 10px;
 }
 
+.nes-field {
+    margin-bottom: 1em;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -29,7 +33,7 @@ body {
 }
 
 .welcome, .about-container, .education-container, .contact-container {
-    margin: 4em;
+    margin: 2em;
 }
 
 .is-light {
