@@ -1,0 +1,124 @@
+/* -------------------------------- */
+/* -- File: common-style.css ------ */
+/* -- Build number: #230405         */
+/* -- Author: Pawel Szymczyk        */
+/* -- PS 2023                       */
+/* -------------------------------- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+html, body, pre, code, kbd, samp {
+    font-family: "Press Start 2P";
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.is-light {
+    background-color: #fff;
+}
+
+
+/* -------------------------------- */
+/* -- nes ------------------------- */
+.nes-field {
+    margin-bottom: 1em;
+}
+
+
+/* -------------------------------- */
+/* -- content --------------------- */
+.content {
+    display: grid; 
+    height: 92vh; 
+    overflow-y: auto;
+}
+
+.text-container {
+    display: grid; 
+}
+
+body > .action-container {
+    position: sticky;
+    top: 84vh;
+}
+
+.action-container {
+    display: flex;
+    width: 100vw;
+}
+
+
+/* -------------------------------- */
+/* avatar ------------------------- */
+.avatar.show, #message.show {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.avatar, #message {
+    opacity: 0;
+    
+}
+
+
+/* -------------------------------- */
+/* loader ------------------------- */
+.loading {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.loader {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* -------------------------------- */
+/* footer ------------------------- */
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    background-image: url("/images/black-white.jpg");
+    background-size: 100vh;
+    height: 8vh;
+}
+
+.footer-box {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}

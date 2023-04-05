@@ -1,0 +1,48 @@
+/* -------------------------------- */
+/* -- File: mobile-style.css ------ */
+/* -- Build number: #230405         */
+/* -- Author: Pawel Szymczyk        */
+/* -- PS 2023                       */
+/* -------------------------------- */
+
+
+/* -------------------------------- */
+/* -- nes ------------------------- */
+.nes-btn {
+    margin: 7px;
+}
+
+
+/* -------------------------------- */
+/* -- content --------------------- */
+.content {
+    grid-template-rows: auto 25vh;
+}
+
+.welcome, .about-container, .education-container, .contact-container {
+    margin: 0.5em;
+}
+
+.message {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.action-container {
+    flex-direction: column;
+} 
+
+
+/* -------------------------------- */
+/* -- form ------------------------ */
+.submit-container {
+    display: flex; 
+    flex-direction: column; 
+}
+
+
+/* -------------------------------- */
+/* footer ------------------------- */
+.footer-box  {
+    width: 80vw;
+}

@@ -4,10 +4,13 @@
 <head>
     <Title>Pawel Szymczyk</Title>
     <!-- https://github.com/Pawel-Szymczyk/NES.css -->
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/common-style.css" media="all">
+    <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 425px)">
+    <link rel="stylesheet" href="styles/desktop-style.css" media="(min-width: 426px)">
 
     <script type="text/javascript" src="scripts/management.js"></script>
 </head>
@@ -21,38 +24,40 @@
 
 <body>
     
-
-    <div class="content" style="display: grid; height: 92vh; grid-template-rows: auto 8vh; overflow-y: auto;">
-        <div style="display: grid; grid-template-columns: 50% auto;">
-            <div style="display: flex; align-items: center; ">
-                <div class="welcome">
-                    <section class="message-list">
-                        <section class="message -left">
-                        <!-- avatar -->
-                        <i class="avatar nes-bcrikko"></i>
-                        <!-- Balloon -->
-                        <div id="message" class="nes-balloon from-left">
-                        </div>
-                        </section>
-                    </section>
-                </div>
+    <div class="content">
+        <div class="text-container">
+       
+            <div class="welcome">
+                <section class="message -left">
+                    <!-- avatar -->
+                    <i class="avatar nes-bcrikko"></i>
+                    <!-- Balloon -->
+                    <div id="message" class="nes-balloon from-left"></div>
+                </section>
             </div>
+
             <div>
                 <div class="about-container" style="display: none;">
                     <div class="nes-container with-title">
                         <p class="title">ABOUT ME</p>
-                        <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+                        <p>Incoming...</p>
                     </div>
                 </div>
                 <div class="education-container" style="display: none;">
                     <div class="nes-container with-title">
-                        <p class="title">EDUCATION</p>
+                        <p class="title">EXPERIENCE</p>
                         <div class="lists">
                             <ul class="nes-list is-circle">
-                              <li>Good morning.</li>
-                              <li>Thou hast had a good night's sleep, I hope.</li>
-                              <li>Thou hast had a good afternoon</li>
-                              <li>Good night.</li>
+                              <li>Incoming...</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nes-container with-title">
+                        <p class="title">OVERTIME PROJECTS</p>
+                        <div class="lists">
+                            <ul class="nes-list is-circle">
+                              <li>Incoming...</li>
                             </ul>
                         </div>
                     </div>
@@ -84,7 +89,7 @@
                                         <label for="message">Message</label>
                                         <textarea name="message" class="nes-textarea" required></textarea>  
                                     </div>
-                                    <div style="display: flex; flex-direction: row; justify-content: flex-end;">
+                                    <div class="submit-container">
                                         <button class="nes-btn is-primary is-link" type="submit">Say Hello</button>
                                     </div>
                                 </form>
@@ -97,12 +102,11 @@
                 </div>
             </div>
         </div>
-        <div>
-            <div class="action-container">
-                <button id="about-btn" type="button" class="nes-btn is-primary">ABOUT ME</button>
-                <button id="education-btn" type="button" class="nes-btn is-success">EDUCATION</button>
-                <button id="contact-btn" type="button" class="nes-btn is-warning">GET IN TOUCH</button>
-            </div>
+
+        <div class="action-container">
+            <button id="about-btn" type="button" class="nes-btn is-primary">ABOUT ME</button>
+            <button id="education-btn" type="button" class="nes-btn is-success">EXPERIENCE</button>  <!-- TODO: update button -->
+            <button id="contact-btn" type="button" class="nes-btn is-warning">GET IN TOUCH</button>
         </div>
     </div>
     

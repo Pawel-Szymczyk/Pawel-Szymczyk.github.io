@@ -67,7 +67,7 @@ document.onreadystatechange = function() {
 };
 
 let index = 0;
-const text = "Hi, nice to meet you!\nMy name is Pawel Szymczyk.\nI am a software engineer,\ncurrently I am working at QWARE.";
+const text = "Hi, nice to meet you!\nMy name is Pawel Szymczyk.\nI'm a software engineer,\ncurrently I'm working at QWARE.";
         
 function typingAnimation (id) {
     setTimeout(() => {

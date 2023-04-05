@@ -1,0 +1,61 @@
+/* -------------------------------- */
+/* -- File: desktop-style.css ------ */
+/* -- Build number: #230405         */
+/* -- Author: Pawel Szymczyk        */
+/* -- PS 2023                       */
+/* -------------------------------- */
+
+
+/* -------------------------------- */
+/* -- nes ------------------------- */
+.nes-btn {
+    margin: 0 10px;
+}
+
+
+/* -------------------------------- */
+/* -- content --------------------- */
+.content {
+    grid-template-rows: auto 8vh; 
+}
+
+.text-container {
+    grid-template-columns: 50% auto;
+}
+
+.welcome, .about-container, .education-container, .contact-container {
+    margin: 2em;
+}
+
+.welcome {
+    display: flex; 
+    align-items: center;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+}
+
+.action-container {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+/* -------------------------------- */
+/* -- form ------------------------ */
+.submit-container {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-end;
+}
+
+
+/* -------------------------------- */
+/* footer ------------------------- */
+.footer-box  {
+    width: 40vw;
+}
