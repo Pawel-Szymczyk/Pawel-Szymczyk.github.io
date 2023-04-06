@@ -24,13 +24,14 @@
 
 <body>
     
-    <div class="content">
+    <main class="content">
         <div class="text-container">
        
             <div class="welcome">
                 <section class="message -left">
                     <!-- avatar -->
-                    <i class="avatar nes-bcrikko"></i>
+                    <!-- <i class="avatar nes-bcrikko"></i> -->
+                    <img class="avatar nes-avatar is-rounded is-large" alt="Me" src="/images/avatar.jpg" style="image-rendering: pixelated;">
                     <!-- Balloon -->
                     <div id="message" class="nes-balloon from-left"></div>
                 </section>
@@ -40,7 +41,22 @@
                 <div class="about-container" style="display: none;">
                     <div class="nes-container with-title">
                         <p class="title">ABOUT ME</p>
-                        <p>Incoming...</p>
+                        
+                        <div style=" display: flex;  align-items: flex-start;">
+                            
+                            <div style=" flex: 1;">
+                                <h2 class="nes-text is-primary">Greetings from Portsmouth!</h2>
+                                <p>My name is Pawel and I have been working as a programmer for around 5 years and I thoroughly enjoy it.</p>
+                            </div>
+                            <img class="" alt="Me" src="/images/avatar.jpg" style="border-radius: 50%;
+                            transform: scaleX(-1);
+                            margin: 0 0 1em 1em;
+                            max-width: 34%;
+                            height: auto;">
+                        </div>
+                        
+                        <p>I believe that every problem has a solution, and I'm always on the lookout for new challenges, whether it's developing a large-scale application or creating a small project from scratch, that push me to grow as a programmer.</p>
+                        <p>When I'm not coding, I enjoy taking my motorcycle out for a ride and exploring new destinations on the open road.  Riding is my passion, and it's a great way to clear my head and get inspired for my next project.</p>
                     </div>
                 </div>
                 <div class="education-container" style="display: none;">
@@ -67,10 +83,7 @@
                         <p class="title">GET IN TOUCH</p>
 
                         <div>
-                            <div>
-                                <span class="nes-text is-primary">Whether you have a question or just want to say hi, <br />I’ll try my best to get back to you!</span>
-                            </div>
-                            <br />
+                            <p class="nes-text is-primary">Whether you have a question or just want to say hi, <br />I’ll try my best to get back to you!</p>
                             <div>
                                 <form action="https://fabform.io/f/6tlC0bm" method="post">
                                     <div class="nes-field">
@@ -103,12 +116,12 @@
             </div>
         </div>
 
-        <div class="action-container">
+        <nav class="action-container">
             <button id="about-btn" type="button" class="nes-btn is-primary">ABOUT ME</button>
             <button id="education-btn" type="button" class="nes-btn is-success">EXPERIENCE</button>  <!-- TODO: update button -->
             <button id="contact-btn" type="button" class="nes-btn is-warning">GET IN TOUCH</button>
-        </div>
-    </div>
+        </nav>
+    </main>
     
     
 
