@@ -6,12 +6,14 @@
     <!-- https://github.com/Pawel-Szymczyk/NES.css -->
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/common-style.css" media="all">
-    <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 425px)">
-    <link rel="stylesheet" href="styles/desktop-style.css" media="(min-width: 426px)">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
+    <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css" />
+    <link rel="stylesheet" href="styles/common-style.css" media="all" />
+    <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 425px)" />
+    <link rel="stylesheet" href="styles/desktop-style.css" media="(min-width: 426px)" />
 
+    <script type="text/javascript" src="scripts/theme.js"></script>
+    <script type="text/javascript" src="scripts/animation.js"></script>
     <script type="text/javascript" src="scripts/management.js"></script>
 </head>
 
@@ -58,7 +60,7 @@
                         <p>When I'm not coding, I enjoy taking my motorcycle out for a ride and exploring new destinations on the open road.  Riding is my passion, and it's a great way to clear my head and get inspired for my next project.</p>
                     </div>
                 </div>
-                <div class="education-container" style="display: none; flex-direction: column; gap: 1em;">
+                <div class="experiance-container" style="display: none; flex-direction: column; gap: 1em;">
                     <div class="nes-container with-title">
                         <p class="title">EXPERIENCE</p>
                         
@@ -202,7 +204,7 @@
 
         <nav class="action-container">
             <button id="about-btn" type="button" class="nes-btn is-primary">ABOUT ME</button>
-            <button id="education-btn" type="button" class="nes-btn is-success">EXPERIENCE</button>  <!-- TODO: update button -->
+            <button id="experiance-btn" type="button" class="nes-btn is-success">EXPERIENCE</button>  <!-- TODO: update button -->
             <button id="contact-btn" type="button" class="nes-btn is-warning">GET IN TOUCH</button>
         </nav>
     </main>
@@ -226,7 +228,7 @@
                     <i class="nes-icon linkedin is-small nes-pointer" alt="linkedin"></i>
                 </a>
             </div>
-            <div class="">
+            <div>
                 PS 2023
             </div>
         </div>
