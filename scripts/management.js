@@ -243,7 +243,7 @@ function typingAnimation (id) {
         if(education.style.display === "none") {
             contact.style.display = "none";
             about.style.display = "none";
-            education.style.display = "block";
+            education.style.display = "flex";
         } else {
             education.style.display = "none";
         }
