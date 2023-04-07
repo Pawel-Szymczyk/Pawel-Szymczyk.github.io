@@ -23,6 +23,9 @@ document.onreadystatechange = function() {
 
     } else {
 
+        initializeExperienceSection();
+        initializeOvertimeProjectseSection();
+
         let about = document.querySelector(".about-container");
         let education = document.querySelector(".education-container");
         let contact = document.querySelector(".contact-container");
@@ -114,8 +117,6 @@ function typingAnimation (id) {
   
     // }  
   }
-
-  
 
   function setBackground() {
 
@@ -253,54 +254,136 @@ function typingAnimation (id) {
 
 
 
+// split text on pages
+function initializeExperienceSection() {
+    const pages = document.getElementsByClassName("experience-section");
 
 
+    // pager
+    let activePage = 1;
+    let firstPage = 1;
+    let lastPage = pages.length;
+
+    const previousBtn = document.getElementById("previous-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    // initialize first page
+    document.getElementById("experience-page-1").style.display = "flex";
+    previousBtn.classList.add("is-disabled");
+
+    // initialize pager
+    document.getElementById("active-page").textContent = activePage;
+    document.getElementById("last-page").textContent = lastPage;
 
 
+    previousBtn.addEventListener("click", ()=> {
+        // check if this is first item in array
+        nextBtn.classList.remove("is-disabled");
+        
+        if(activePage > firstPage) {
+            activePage--;
+            if(activePage == firstPage) {
+                // disable btn
+                previousBtn.classList.add("is-disabled");
+            }
+            Array.from(pages).forEach((item, index) => {
+                item.style.display = "none";
+                if(activePage === index+1) {
+                    item.style.display = "flex";
+                  } 
+            });
+            document.getElementById("active-page").textContent = activePage;
+        }
+        
+    });
+
+    nextBtn.addEventListener("click", ()=> {
+        previousBtn.classList.remove("is-disabled");
+
+        if(activePage < lastPage) {
+            activePage++;
+            if(activePage == lastPage) {
+                // disable btn
+                nextBtn.classList.add("is-disabled");
+            }
+
+            Array.from(pages).forEach((item, index) => {
+                item.style.display = "none";
+                if(activePage === index+1) {
+                    item.style.display = "flex";
+                  } 
+            });
+            document.getElementById("active-page").textContent = activePage;
+        } 
+
+    });
 
 
-// const loader = document.querySelector(".loading");
+}
 
 
-// window.addEventListener('load', () => {
-//     const loader = document.querySelector(".loader");
-//     setTimeout(function() {
-//         //loader.style.right = "0";
-//         document.body.classList.remove("loading");
-//       }, 5000);
-// });
+function initializeOvertimeProjectseSection() {
+
+    const pages = document.getElementsByClassName("overtime-projects-section");
+
+    // pager
+    let activePage = 1;
+    let firstPage = 1;
+    let lastPage = pages.length;
+
+    const previousBtn = document.getElementById("overtime-projects-previous-btn");
+    const nextBtn = document.getElementById("overtime-projects-next-btn");
+
+    // initialize first page
+    document.getElementById("overtime-projects-page-1").style.display = "flex";
+    previousBtn.classList.add("is-disabled");
+
+    // initialize pager
+    document.getElementById("overtime-projects-active-page").textContent = activePage;
+    document.getElementById("overtime-projects-last-page").textContent = lastPage;
+
+    previousBtn.addEventListener("click", ()=> {
+        // check if this is first item in array
+        nextBtn.classList.remove("is-disabled");
+        
+        if(activePage > firstPage) {
+            activePage--;
+            if(activePage == firstPage) {
+                // disable btn
+                previousBtn.classList.add("is-disabled");
+            }
+            Array.from(pages).forEach((item, index) => {
+                item.style.display = "none";
+                if(activePage === index+1) {
+                    item.style.display = "flex";
+                  } 
+            });
+            document.getElementById("overtime-projects-active-page").textContent = activePage;
+        }
+        
+    });
 
 
-// function startLoader() {
-//     const loader = document.querySelector(".loader");
-  
-//     setTimeout(function() {
-//       //loader.style.right = "0";
-      
-//     }, 1000);
-  
-//     window.addEventListener("DOMContentLoaded", function(event) {
-//       setTimeout(function() {
-//         //loader.style.left = "100%";
-//         document.body.classList.remove("loading");
-//       }, 1500);
-//     });
-//   }
-  
-//   startLoader();
+    nextBtn.addEventListener("click", ()=> {
+        previousBtn.classList.remove("is-disabled");
 
+        if(activePage < lastPage) {
+            activePage++;
+            if(activePage == lastPage) {
+                // disable btn
+                nextBtn.classList.add("is-disabled");
+            }
 
+            Array.from(pages).forEach((item, index) => {
+                item.style.display = "none";
+                if(activePage === index+1) {
+                    item.style.display = "flex";
+                  } 
+            });
+            document.getElementById("overtime-projects-active-page").textContent = activePage;
+        } 
 
+    });
 
-// function myfunction() {   
-//     alert("how are you");  
-//  }  
+}
 
-
-//  const aboutBtn = document.getElementById("about-btn");
-//  if(aboutBtn) {
-//     aboutBtn.addEventListener("click", function () {
-//         alert("Ouch! Stop poking me!");
-//       });
-//  }
- 
