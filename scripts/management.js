@@ -26,26 +26,23 @@ document.onreadystatechange = function() {
     }
 };
 
-
- 
-
 function addNavigation() {
     let about = document.querySelector(".about-container");
-    let experiance = document.querySelector(".experiance-container");
+    let experience = document.querySelector(".experience-container");
     let contact = document.querySelector(".contact-container");
     
-    addAboutEventListener(about, contact, experiance);
-    addExperianceEventListener(about, contact, experiance);
-    addContactEventListener(about, contact, experiance);
+    addAboutEventListener(about, contact, experience);
+    addExperianceEventListener(about, contact, experience);
+    addContactEventListener(about, contact, experience);
 }
 
 
-  function addAboutEventListener(about, contact, experiance) {
+  function addAboutEventListener(about, contact, experience) {
     // about
     document.getElementById("about-btn").addEventListener("click", () => {
             
         if(about.style.display === "none") {
-            experiance.style.display = "none";
+            experience.style.display = "none";
             contact.style.display = "none";
             about.style.display = "block";
         } else {
@@ -54,12 +51,12 @@ function addNavigation() {
     });
   }
 
-  function addContactEventListener(about, contact, experiance) {
+  function addContactEventListener(about, contact, experience) {
     // contact
     document.getElementById("contact-btn").addEventListener("click", () => {
             
         if(contact.style.display === "none") {
-            experiance.style.display = "none";
+            experience.style.display = "none";
             about.style.display = "none";
             contact.style.display = "block";
         } else {
@@ -68,16 +65,16 @@ function addNavigation() {
     });
   }
 
-  function addExperianceEventListener(about, contact, experiance) {
+  function addExperianceEventListener(about, contact, experience) {
     // experiance
-    document.getElementById("experiance-btn").addEventListener("click", () => {
+    document.getElementById("experience-btn").addEventListener("click", () => {
             
-        if(experiance.style.display === "none") {
+        if(experience.style.display === "none") {
             contact.style.display = "none";
             about.style.display = "none";
-            experiance.style.display = "flex";
+            experience.style.display = "flex";
         } else {
-            experiance.style.display = "none";
+            experience.style.display = "none";
         }
     });
   }
@@ -93,17 +90,17 @@ function addExperienceSection() {
     let firstPage = 1;
     let lastPage = pages.length;
 
-    const previousBtn = document.getElementById("previous-btn");
-    const nextBtn = document.getElementById("next-btn");
+    const previousBtn = document.getElementById("experience-previous-btn");
+    const nextBtn = document.getElementById("experience-next-btn");
 
     // initialize first page
     document.getElementById("experience-page-1").style.display = "flex";
     previousBtn.classList.add("is-disabled");
 
     // initialize pager
-    let activePageElement = document.getElementById("active-page");
+    let activePageElement = document.getElementById("experience-active-page");
     activePageElement.textContent = activePage;
-    document.getElementById("last-page").textContent = lastPage;
+    document.getElementById("experience-last-page").textContent = lastPage;
 
 
     previousBtn.addEventListener("click", ()=> {
@@ -122,7 +119,7 @@ function addExperienceSection() {
                     item.style.display = "flex";
                   } 
             });
-            document.getElementById("active-page").textContent = activePage;
+            document.getElementById("experience-active-page").textContent = activePage;
         }
         
     });
@@ -143,7 +140,7 @@ function addExperienceSection() {
                     item.style.display = "flex";
                   } 
             });
-            document.getElementById("active-page").textContent = activePage;
+            document.getElementById("experience-active-page").textContent = activePage;
         } 
 
     });

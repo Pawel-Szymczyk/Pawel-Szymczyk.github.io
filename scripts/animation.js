@@ -16,25 +16,36 @@ const psAnimation = (function() {
                 document.querySelector(".avatar").classList.add('show');
 
                 setTimeout(() => {
-                    // show bubble message
+                    // show message
                     document.querySelector("#message").classList.add('show');
 
                     // start typing
-                    typingAnimation("message");
+                    startTyping("message");
+
+                    // hide message
+                    setTimeout(() => {
+                        document.getElementById("message").innerHTML = "";
+                        document.querySelector("#message").classList.remove('show');
+
+                        // move avatar to top of the screen
+                        setTimeout(() => {
+                            document.querySelector(".avatar").classList.add('move');
+                        }, 1000);
+                        
+                    }, 8000);
 
                 }, 1000);
              } , 500);
-
         }, 2500);
     }
 
 
-    function typingAnimation (id) {
+    function startTyping (id) {
         setTimeout(() => {
         index++;
         updateText(id);
         if (index < text.length) {
-            typingAnimation(id);
+            startTyping(id);
         }
         }, 50)
     }

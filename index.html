@@ -29,14 +29,15 @@
     <main class="content">
         <div class="text-container">
        
-            <div class="welcome">
-                <section class="message -left">
+            <div class="greetings-container">
+                <!-- <section class="message -left"> -->
                     <!-- avatar -->
                     <img class="avatar nes-avatar is-rounded is-large" alt="Me" src="/images/avatar.jpg" style="image-rendering: pixelated;">
                     <!-- Balloon -->
-                    <div id="message" class="nes-balloon from-left"></div>
-                </section>
+                    <div id="message" class="nes-balloon from-left">...</div>
+                <!-- </section> -->
             </div>
+            
 
             <div>
                 <div class="about-container" style="display: none;">
@@ -60,7 +61,7 @@
                         <p>When I'm not coding, I enjoy taking my motorcycle out for a ride and exploring new destinations on the open road.  Riding is my passion, and it's a great way to clear my head and get inspired for my next project.</p>
                     </div>
                 </div>
-                <div class="experiance-container" style="display: none; flex-direction: column; gap: 1em;">
+                <div class="experience-container" style="display: none; flex-direction: column; gap: 1em;">
                     <div class="nes-container with-title">
                         <p class="title">EXPERIENCE</p>
                         
@@ -72,25 +73,28 @@
                                 <p>In addition, I developed and maintained intelli-CTi drivers using C#, demonstrating my proficiency in the language. I also gained extensive experience in designing and managing websites, blogs, and portals using various tools, including WordPress, MODX, and others. My technical skills are diverse.</p>
                             </section>
                             <section id="experience-page-3" class="experience-section" style="display: none;">
-                                <p>Over the time I have worked with languages and frameworks such as: </p>
-                                <ul>
-                                    <li>JavaScript,</li>
-                                    <li>TypeScript,</li>
-                                    <li>React,</li>
-                                    <li>Python,</li>
-                                    <li>Blazor</li>
-                                </ul>
+                                <div class="lists">
+                                    <p>Over the time I have worked with languages and frameworks such as: </p>
+                                    <ul class="nes-list is-circle">
+                                        <li>JavaScript,</li>
+                                        <li>TypeScript,</li>
+                                        <li>React,</li>
+                                        <li>Python,</li>
+                                        <li>Blazor</li>
+                                    </ul>
+                                </div>
+                               
                             </section>
                             <section id="experience-page-4" class="experience-section" style="display: none;">
                                 <p>Overall, my experience in managing complex projects and technical expertise makes me confident in my ability to tackle new challenges and drive successful outcomes for any team or organization.</p>
                             </section>
                             <div class="experience-pager">
                                 
-                                <button id="previous-btn" type="button" class="nes-btn is-primary">&lt;</button> 
-                                <span id="active-page" class="nes-text is-primary"></span>
+                                <button id="experience-previous-btn" type="button" class="nes-btn is-primary">&lt;</button> 
+                                <span id="experience-active-page" class="nes-text is-primary"></span>
                                 <span class="nes-text">&#47;</span>
-                                <span id="last-page" class="nes-text"></span>
-                                <button id="next-btn" type="button" class="nes-btn is-primary">&gt;</button>
+                                <span id="experience-last-page" class="nes-text"></span>
+                                <button id="experience-next-btn" type="button" class="nes-btn is-primary">&gt;</button>
                             </div>
                         </div>
                         
@@ -204,7 +208,7 @@
 
         <nav class="action-container">
             <button id="about-btn" type="button" class="nes-btn is-primary">ABOUT ME</button>
-            <button id="experiance-btn" type="button" class="nes-btn is-success">EXPERIENCE</button>  <!-- TODO: update button -->
+            <button id="experience-btn" type="button" class="nes-btn is-success">EXPERIENCE</button>  <!-- TODO: update button -->
             <button id="contact-btn" type="button" class="nes-btn is-warning">GET IN TOUCH</button>
         </nav>
     </main>

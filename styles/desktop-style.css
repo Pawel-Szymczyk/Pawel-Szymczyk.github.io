@@ -23,18 +23,8 @@
     grid-template-columns: 50% auto;
 }
 
-.welcome, .about-container, .education-container, .contact-container {
+.greetings-container, .about-container, .experience-container, .contact-container {
     margin: 2em;
-}
-
-.welcome {
-    display: flex; 
-    align-items: center;
-}
-
-.message {
-    display: flex;
-    align-items: flex-end;
 }
 
 .action-container {
@@ -43,6 +33,44 @@
     flex-wrap: nowrap;
     align-items: center;
 }
+
+
+/* -------------------------------- */
+/* avatar ------------------------- */
+
+.avatar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    }
+    
+    .avatar.show {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+    }
+
+    .avatar.move {
+        transform: translateY(100%) scale(1);
+        top: 0;
+    }
+
+#message {
+    position: fixed;
+    top: 50%;
+    transform: translate(5vw,-100%) scale(0);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    }
+
+    #message.show {
+        transform: translate(5vw,-100%) scale(1);
+        opacity: 1;
+    }
+
+
+
 
 
 /* -------------------------------- */

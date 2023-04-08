@@ -19,18 +19,26 @@
     grid-template-rows: auto 25vh;
 }
 
-.welcome, .about-container, .education-container, .contact-container {
+.greetings-container, .about-container, .experience-container, .contact-container {
     margin: 0.5em;
 }
 
-.message {
+.greetings-container {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: flex-end;
 }
 
-.action-container {
-    flex-direction: column;
-} 
+#message {
+    opacity: 0;
+    
+}
+
+#message.show {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
 
 
 /* -------------------------------- */
@@ -45,4 +53,31 @@
 /* footer ------------------------- */
 .footer-box  {
     width: 80vw;
+}
+
+
+
+@media (orientation: landscape) {
+
+}
+
+
+@media (orientation: portrait) {
+
+    .nes-container {
+     
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+    }
+
+    p, li {
+        font-size: 0.8rem;
+    }
 }

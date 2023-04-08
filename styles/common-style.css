@@ -68,18 +68,18 @@ body > .action-container {
     width: 100vw;
 }
 
-
-/* -------------------------------- */
-/* avatar ------------------------- */
-.avatar.show, #message.show {
-    opacity: 1;
-    transition: opacity 1s linear;
+.experience-pager, .overtime-projects-pager {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 12px;
 }
 
-.avatar, #message {
-    opacity: 0;
-    
-}
+
+
+
 
 
 /* -------------------------------- */
