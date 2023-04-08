@@ -10,11 +10,15 @@
 
 const psAnimation = (function() {
 
-
+    /**
+     * Global variables
+     */
     let index = 0;
     const text = "Hi, nice to meet you!\nMy name is Pawel Szymczyk.\nI'm a software engineer,\ncurrently I'm working at QWARE.";
             
-
+    /**
+     * Run welcome message animation.
+     */
     function runWelcomeMessage() {
         //delay for 2500ms
         setTimeout(() => {
@@ -52,7 +56,10 @@ const psAnimation = (function() {
         }, 2500);
     }
 
-
+    /**
+     * Run typing mechanism.
+     * @param {string} id - message container id
+     */
     function startTyping (id) {
         setTimeout(() => {
         index++;
@@ -63,8 +70,11 @@ const psAnimation = (function() {
         }, 50)
     }
 
-
-
+    /**
+     * Typing mechanism, returning text character after character.
+     * @param {string} id - message container id
+     * @returns updated text.
+     */
     function updateText(id) {
         // Get the element with our id
         const typing = document.getElementById(id); 
@@ -101,6 +111,9 @@ const psAnimation = (function() {
         // }  
     }
     
+    /**
+     * Run loading animation.
+     */
     function startLoaderAnimation() {
         document.querySelector("body").style.visibility = "hidden";
         document.querySelector(".content").style.display = "none";
@@ -119,6 +132,9 @@ const psAnimation = (function() {
         }, 25);
     }
 
+    /**
+     * Stops running loading animation.
+     */
     function finishLoaderAnimation() {
         //delay for 2.5s and bring body back.
         setTimeout(() => {
@@ -131,7 +147,6 @@ const psAnimation = (function() {
             
         }, 2500);
     }
-
 
     // Public API
     return {

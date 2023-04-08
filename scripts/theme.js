@@ -10,6 +10,9 @@
 
 const psTheme = (function() {
 
+    /**
+     * Change theme based on hour.
+     */
     function setTheme() {
         const hour = new Date().getHours();
         if(hour >= 5 && hour < 22) {
@@ -19,6 +22,9 @@ const psTheme = (function() {
         }
     }
     
+    /**
+     * Update content in dark mode.
+     */
     function setDarkTheme() {
         const matches = document.querySelectorAll(".nes-container");
         matches.forEach((match) => {
@@ -37,6 +43,9 @@ const psTheme = (function() {
         textarea.classList.add('is-dark');
     }
 
+    /**
+     * Update content in light mode.
+     */
     function setLightTheme() {
         const matches = document.querySelectorAll(".nes-container");
         matches.forEach((match) => {
@@ -47,6 +56,9 @@ const psTheme = (function() {
         message.classList.add('is-light');
     }
 
+    /**
+     * set 1 of 12 backgrounds depends on actual hour.
+     */
     function setBackground() {
 
         let idx = -1;

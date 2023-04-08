@@ -23,9 +23,9 @@ html, body {
     width: 100%;
 }
 
-h2 {
+/* h2 {
     font-size: 1.5em;
-}
+} */
 
 body {
     display: flex;
@@ -78,7 +78,13 @@ body > .action-container {
     margin-top: 12px;
 }
 
-
+.avatar-img {
+    border-radius: 50%;
+    transform: scaleX(-1);
+    margin: 0 0 1em 1em;
+    max-width: 34%;
+    height: auto;
+}
 
 
 

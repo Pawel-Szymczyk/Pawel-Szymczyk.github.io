@@ -6,11 +6,17 @@
     <!-- https://github.com/Pawel-Szymczyk/NES.css -->
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P" />
     <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css" />
+
     <link rel="stylesheet" href="styles/common-style.css" media="all" />
-    <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 425px)" />
-    <link rel="stylesheet" href="styles/desktop-style.css" media="(min-width: 426px)" />
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="styles/portrait-style.css">
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="styles/landscape-style.css">
 
     <script type="text/javascript" src="scripts/theme.js"></script>
     <script type="text/javascript" src="scripts/animation.js"></script>
@@ -28,33 +34,24 @@
     
     <main class="content">
         <div class="text-container">
-       
             <div class="greetings-container">
-                <!-- <section class="message -left"> -->
-                    <!-- avatar -->
-                    <img class="avatar nes-avatar is-rounded is-large" alt="Me" src="/images/avatar.jpg" style="image-rendering: pixelated;">
-                    <!-- Balloon -->
-                    <div id="message" class="nes-balloon from-left">...</div>
-                <!-- </section> -->
+                <!-- avatar -->
+                <img class="avatar nes-avatar is-rounded is-large" alt="Me" src="/images/avatar.jpg" style="image-rendering: pixelated;">
+                <!-- Balloon -->
+                <div id="message" class="nes-balloon from-left">...</div>
             </div>
             
-
             <div>
                 <div class="about-container" style="display: none;">
                     <div class="nes-container with-title">
                         <p class="title">ABOUT ME</p>
                         
                         <div style=" display: flex;  align-items: flex-start;">
-                            
                             <div style=" flex: 1;">
                                 <h2 class="nes-text is-primary">Greetings from Portsmouth!</h2>
                                 <p>My name is Pawel and I have been working as a programmer for around 5 years and I thoroughly enjoy it.</p>
                             </div>
-                            <img class="" alt="Me" src="/images/avatar.jpg" style="border-radius: 50%;
-                            transform: scaleX(-1);
-                            margin: 0 0 1em 1em;
-                            max-width: 34%;
-                            height: auto;">
+                            <img class="avatar-img" alt="Me" src="/images/avatar.jpg">
                         </div>
                         
                         <p>I believe that every problem has a solution, and I'm always on the lookout for new challenges, whether it's developing a large-scale application or creating a small project from scratch, that push me to grow as a programmer.</p>
@@ -83,13 +80,11 @@
                                         <li>Blazor</li>
                                     </ul>
                                 </div>
-                               
                             </section>
                             <section id="experience-page-4" class="experience-section" style="display: none;">
                                 <p>Overall, my experience in managing complex projects and technical expertise makes me confident in my ability to tackle new challenges and drive successful outcomes for any team or organization.</p>
                             </section>
                             <div class="experience-pager">
-                                
                                 <button id="experience-previous-btn" type="button" class="nes-btn is-primary">&lt;</button> 
                                 <span id="experience-active-page" class="nes-text is-primary"></span>
                                 <span class="nes-text">&#47;</span>
@@ -97,75 +92,62 @@
                                 <button id="experience-next-btn" type="button" class="nes-btn is-primary">&gt;</button>
                             </div>
                         </div>
-                        
                     </div>
 
                     <div class="nes-container with-title">
                         <p class="title">OVERTIME PROJECTS</p>
 
                         <div class="overtime-projects-page">
-
                             <section id="overtime-projects-page-1" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">ChromeTabsManager</h2>
                                     <h3>Chrome extension to save and load number of tabs in JSON format.</h3>
                                 </div>
                             </section>
-
                             <section id="overtime-projects-page-2" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">DualDesktopWallpaper</h2>
                                     <h3>Desktop application to set multiple wallpapers across double screen setup.</h3>
                                 </div>
                             </section>
-
                             <section id="overtime-projects-page-3" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">HomeBudget</h2>
                                     <h3>Web application to manage home budget.</h3>
                                 </div>
                             </section>
-
                             <section id="overtime-projects-page-4" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">PS.Motorcycle</h2>
                                     <h3>Web portal about motorcycles.</h3>
                                 </div>
                             </section>
-
                             <section id="overtime-projects-page-5" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">CurrencyConverter</h2>
                                     <h3>Simple app to convert one currency into another.</h3>
                                 </div>
                             </section>
-
                             <section id="overtime-projects-page-6" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">Snake</h2>
                                     <h3>(unity game) - mobile game about well know snake (demo).</h3>
                                 </div>
                             </section>
-
                             <section id="overtime-projects-page-7" class="overtime-projects-section" style="display: none;">
                                 <div class="card nes-container">
                                     <h2 class="nes-text is-primary">SmartHome (setup)</h2>
                                     <h3>A mobile application that enables me to control lamps, window roller blinds, etc. In addition to these, I also use Arduino-based devices.</h3>
                                 </div>
                             </section>
-
-
                             <div class="overtime-projects-pager">
-                                
                                 <button id="overtime-projects-previous-btn" type="button" class="nes-btn is-primary">&lt;</button> 
                                 <span id="overtime-projects-active-page" class="nes-text is-primary"></span>
                                 <span class="nes-text">&#47;</span>
                                 <span id="overtime-projects-last-page" class="nes-text"></span>
                                 <button id="overtime-projects-next-btn" type="button" class="nes-btn is-primary">&gt;</button>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
                 <div class="contact-container" style="display: none;">
@@ -213,8 +195,6 @@
         </nav>
     </main>
     
-    
-
     <!-- Image used for footer background image is comming from  https://www.vecteezy.com/ -->
     <footer class="footer">
         <div class="footer-box">

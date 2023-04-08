@@ -1,11 +1,10 @@
 /* -------------------------------- */
-/* -- File: mobile-style.css ------ */
-/* -- Build number: #230405         */
+/* -- File: portrait-style.css ---- */
+/* -- Build number: #230408         */
 /* -- Version: 1.0.0                */
 /* -- Author: Pawel Szymczyk        */
 /* -- PS 2023                       */
 /* -------------------------------- */
-
 
 /* -------------------------------- */
 /* -- nes ------------------------- */
@@ -13,9 +12,25 @@
     margin: 7px;
 }
 
+.nes-container {
+    padding: 1rem;
+}
 
 /* -------------------------------- */
 /* -- content --------------------- */
+
+h2 {
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+}
+
+p, li, .nes-field {
+    font-size: 0.8rem;
+}
+
 .content {
     grid-template-rows: auto 25vh;
 }
@@ -62,27 +77,3 @@
 
 
 
-@media (orientation: landscape) {
-
-}
-
-
-@media (orientation: portrait) {
-
-    .nes-container {
-     
-        padding: 1rem;
-    }
-
-    h2 {
-        font-size: 0.9rem;
-    }
-
-    h3 {
-        font-size: 0.8rem;
-    }
-
-    p, li, .nes-field {
-        font-size: 0.8rem;
-    }
-}

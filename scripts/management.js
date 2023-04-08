@@ -8,7 +8,9 @@
 
 'use strinct';
 
-
+/**
+ * Run loading program when loading page, and load content after page is ready.
+ */
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
         // ---------------------------------------------------------------
@@ -34,6 +36,10 @@ document.onreadystatechange = function() {
     }
 };
 
+
+/**
+ * Add navigation to page.
+ */
 function addNavigation() {
     let about = document.querySelector(".about-container");
     let experience = document.querySelector(".experience-container");
@@ -45,7 +51,13 @@ function addNavigation() {
 }
 
 
-  function addAboutEventListener(about, contact, experience) {
+/**
+ * Add "click" event listener to about section, toggle other sections depends on case
+ * @param {object} about - about section
+ * @param {object} contact - contact section
+ * @param {object} experience - experience section 
+ */
+function addAboutEventListener(about, contact, experience) {
     // about
     document.getElementById("about-btn").addEventListener("click", () => {
             
@@ -57,9 +69,16 @@ function addNavigation() {
             about.style.display = "none";
         }
     });
-  }
+}
 
-  function addContactEventListener(about, contact, experience) {
+
+/**
+ * Add "click" event listener to contact section, toggle other sections depends on case
+ * @param {object} about - about section
+ * @param {object} contact - contact section
+ * @param {object} experience - experience section 
+ */
+function addContactEventListener(about, contact, experience) {
     // contact
     document.getElementById("contact-btn").addEventListener("click", () => {
             
@@ -71,9 +90,16 @@ function addNavigation() {
             contact.style.display = "none";
         }
     });
-  }
+}
 
-  function addExperianceEventListener(about, contact, experience) {
+
+/**
+ * Add "click" event listener to experience section, toggle other sections depends on case
+ * @param {object} about - about section
+ * @param {object} contact - contact section
+ * @param {object} experience - experience section 
+ */
+function addExperianceEventListener(about, contact, experience) {
     // experiance
     document.getElementById("experience-btn").addEventListener("click", () => {
             
@@ -85,10 +111,12 @@ function addNavigation() {
             experience.style.display = "none";
         }
     });
-  }
+}
 
 
-// split text on pages
+/**
+ * Add Experience section to page, adds paging allowing to split content on multiple pages. 
+ */
 function addExperienceSection() {
     
     const pages = document.getElementsByClassName("experience-section");
@@ -121,12 +149,16 @@ function addExperienceSection() {
                 // disable btn
                 previousBtn.classList.add("is-disabled");
             }
+
+            // update each page, displaying active and hide rest
             Array.from(pages).forEach((item, index) => {
                 item.style.display = "none";
                 if(activePage === index+1) {
                     item.style.display = "flex";
                   } 
             });
+
+            // update active page
             document.getElementById("experience-active-page").textContent = activePage;
         }
         
@@ -142,12 +174,15 @@ function addExperienceSection() {
                 nextBtn.classList.add("is-disabled");
             }
 
+            // update each page, displaying active and hide rest
             Array.from(pages).forEach((item, index) => {
                 item.style.display = "none";
                 if(activePage === index+1) {
                     item.style.display = "flex";
                   } 
             });
+
+            // update active page
             document.getElementById("experience-active-page").textContent = activePage;
         } 
 
@@ -157,6 +192,9 @@ function addExperienceSection() {
 }
 
 
+/**
+ * Add overtime projects section to page, adds paging allowing to split cards on multiple pages. 
+ */
 function addOvertimeProjectsSection() {
 
     const pages = document.getElementsByClassName("overtime-projects-section");
@@ -187,12 +225,16 @@ function addOvertimeProjectsSection() {
                 // disable btn
                 previousBtn.classList.add("is-disabled");
             }
+
+            // update each page, displaying active and hide rest
             Array.from(pages).forEach((item, index) => {
                 item.style.display = "none";
                 if(activePage === index+1) {
                     item.style.display = "flex";
                   } 
             });
+
+            // update active page
             document.getElementById("overtime-projects-active-page").textContent = activePage;
         }
         
@@ -208,16 +250,18 @@ function addOvertimeProjectsSection() {
                 nextBtn.classList.add("is-disabled");
             }
 
+            // update each page, displaying active and hide rest
             Array.from(pages).forEach((item, index) => {
                 item.style.display = "none";
                 if(activePage === index+1) {
                     item.style.display = "flex";
                   } 
             });
+
+            // update active page
             document.getElementById("overtime-projects-active-page").textContent = activePage;
         } 
     });
-
 }
 
 

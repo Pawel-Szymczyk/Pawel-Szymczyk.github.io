@@ -1,0 +1,204 @@
+/* -------------------------------- */
+/* -- File: landscape-style.css --- */
+/* -- Build number: #230408         */
+/* -- Version: 1.0.0                */
+/* -- Author: Pawel Szymczyk        */
+/* -- PS 2023                       */
+/* -------------------------------- */
+
+  
+    /* 
+        ##Device = Laptops, Desktops
+        ##Screen = B/w 1025px to 1280px
+    */
+    
+  @media (min-width: 1025px) {
+    
+    /* -------------------------------- */
+    /* -- nes ------------------------- */
+    .nes-btn {
+        margin: 0 10px;
+    }
+
+    /* -------------------------------- */
+    /* -- content --------------------- */
+    .content {
+        grid-template-rows: auto 8vh; 
+    }
+
+    .text-container {
+        grid-template-columns: 50% auto;
+    }
+
+    .greetings-container, .about-container, .experience-container, .contact-container {
+        margin: 2em;
+    }
+
+    .action-container {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+
+    /* -------------------------------- */
+    /* avatar ------------------------- */
+
+    .avatar {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        }
+        
+        .avatar.show {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+        }
+
+        .avatar.move {
+            transform: translateY(100%) scale(1);
+            top: 0;
+        }
+
+    #message {
+        position: fixed;
+        top: 50%;
+        transform: translate(5vw,-100%) scale(0);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        }
+
+        #message.show {
+            transform: translate(5vw,-100%) scale(1);
+            opacity: 1;
+        }
+
+    /* -------------------------------- */
+    /* -- form ------------------------ */
+    .submit-container {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: flex-end;
+    }
+
+
+    /* -------------------------------- */
+    /* footer ------------------------- */
+    .footer-box  {
+        width: 40vw;
+    }
+  }
+  
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .greetings-container, .about-container, .experience-container, .contact-container {
+        margin: 2em;
+    }
+   
+    .action-container {
+        margin: 1em 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    .avatar-img {
+        max-width: 22%;
+    }
+
+    /* -------------------------------- */
+    /* -- form ------------------------ */
+    .submit-container {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: flex-end;
+    }
+
+    .footer {
+        height: 15vh;
+    }
+
+    .footer-box {
+        width: 50vw;
+    }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+
+
+    .nes-container {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+    }
+
+    p, li, .nes-field {
+        font-size: 0.8rem;
+    }
+
+    .greetings-container, .about-container, .experience-container, .contact-container {
+        margin: 1em;
+    }
+
+    .greetings-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    #message {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #message.show {
+        opacity: 1;
+        transition: opacity 1s linear;
+    }
+
+    .avatar-img {
+        max-width: 28%;
+    }
+    
+
+    .action-container {
+        margin: 1em 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+    
+    
+    .footer {
+        height: 15vh;
+    }
+
+    .footer-box {
+        width: 50vw;
+    }
+    
+  }
+  
+ 
