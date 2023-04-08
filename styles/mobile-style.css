@@ -1,6 +1,7 @@
 /* -------------------------------- */
 /* -- File: mobile-style.css ------ */
 /* -- Build number: #230405         */
+/* -- Version: 1.0.0                */
 /* -- Author: Pawel Szymczyk        */
 /* -- PS 2023                       */
 /* -------------------------------- */
@@ -39,6 +40,10 @@
     transition: opacity 1s linear;
 }
 
+.action-container {
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
 
 /* -------------------------------- */
@@ -77,7 +82,7 @@
         font-size: 0.8rem;
     }
 
-    p, li {
+    p, li, .nes-field {
         font-size: 0.8rem;
     }
 }

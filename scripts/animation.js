@@ -1,3 +1,11 @@
+// -------------------------------------------
+// file: animation.js
+// build: #230408
+// version: 1.0.0
+// author: Pawel Szymczyk
+// PS 2023
+// -------------------------------------------
+
 'use strinct';
 
 const psAnimation = (function() {
@@ -24,8 +32,13 @@ const psAnimation = (function() {
 
                     // hide message
                     setTimeout(() => {
-                        document.getElementById("message").innerHTML = "";
+                        // document.getElementById("message").innerHTML = "";
                         document.querySelector("#message").classList.remove('show');
+
+                        // remove message 
+                        setTimeout(() => {
+                           document.getElementById("message").remove();
+                        }, 200);
 
                         // move avatar to top of the screen
                         setTimeout(() => {

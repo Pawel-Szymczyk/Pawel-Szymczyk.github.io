@@ -1,3 +1,11 @@
+// -------------------------------------------
+// file: theme.js
+// build: #230408
+// version: 1.0.0
+// author: Pawel Szymczyk
+// PS 2023
+// -------------------------------------------
+
 'use strinct';
 
 const psTheme = (function() {
